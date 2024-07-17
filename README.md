@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project aims to predict the number of bicycles rented per hour based on various environmental and temporal factors. The dataset is sourced from the Kaggle competition "Proton X TF 09 - Bài toán dự đoán xe đạp".
+The goal of this project is to predict the number of bicycle rentals per hour based on various features such as weather conditions, time of day, and other relevant factors.
 
 ## Project Overview
 
@@ -13,9 +13,38 @@ In this project, we develop and evaluate multiple machine-learning models to acc
 - Gradient Boosting
 - XGBoost
 
+## Project Structure
+```
+predict_bicycle_project/
+│
+├── data/
+│   ├── trainDataset.csv
+│   ├── submissionDataset.csv
+│   └── submissionDataset_with_predictions.csv
+│
+├── plots/
+│   ├── eda/
+│   ├── visualization/
+│   └── statistical_analysis/
+│
+├── src/
+│   ├── __init__.py
+│   ├── data_preprocessing.py
+│   ├── eda.py
+│   ├── models.py
+│   ├── train_and_evaluate.py
+│   ├── predict.py
+│   └── visualization.py
+│   └── statistical_analysis.py
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
 ## Motivation
 
-Understanding and predicting bicycle rental patterns can help optimize bike-sharing systems and improve user experience.
+Accurate prediction of bicycle rentals can help in resource allocation, demand forecasting, and improving the efficiency of bike-sharing systems.
 
 ## Setup
 
@@ -45,35 +74,50 @@ To set up your environment, follow these steps:
 
 ### Data Collection
 
-The dataset is provided by the Kaggle competition and can be downloaded from [this link](https://www.kaggle.com/competitions/proton-x-tf-09-bai-toan-du-doan-xe-dap/data). It includes various features such as season, year, month, hour, weather conditions, temperature, and humidity.
+The dataset contains hourly rental data from the bike-sharing system. The features include:
+- `id`: Record ID
+- `season`: Season (1: Spring, 2: Summer, 3: Fall, 4: Winter)
+- `yr`: Year (0: 2011, 1: 2012)
+- `mnth`: Month (1 to 12)
+- `hr`: Hour (0 to 23)
+- `holiday`: Holiday (0: No, 1: Yes)
+- `weekday`: Day of the week
+- `workingday`: Working day (0: No, 1: Yes)
+- `weathersit`: Weather situation (1 to 4)
+- `temp`: Normalized temperature
+- `atemp`: Normalized feeling temperature
+- `hum`: Normalized humidity
+- `cnt`: Count of total rental bikes
 
 ### Data Preprocessing
 
-Data preprocessing steps include:
-- Handling missing values
-- Encoding categorical variables
-- Normalizing numerical features
-- Splitting the data into training and validation sets
+Data preprocessing includes handling missing values, encoding categorical variables, and scaling numerical features.
 
-### Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
-EDA involves:
+### EDA involves:
 - Understanding the distribution of the target variable
 - Analyzing relationships between features and the target
 - Identifying patterns and anomalies in the data
 
-### Data Visualization
+EDA scripts are located in `src/eda.py` and save figures in `plots/eda`.
+
+## Data Visualization
 
 Data visualization techniques are used to:
 - Visualize the distribution of bicycle rentals
 - Explore temporal trends (e.g., rentals by hour, day, month)
 - Examine the impact of weather conditions on rentals
 
-### Statistical Analysis
+Visualization scripts are located in `src/visualization.py` and save figures in `plots/visualization`.
+
+## Statistical Analysis
 
 Statistical analysis is performed to:
 - Identify significant features
 - Understand correlations between features and the target variable
+
+Statistical analysis scripts are located in `src/statistical_analysis.py` and save figures in `plots/statistical_analysis`.
 
 ## Modeling
 
