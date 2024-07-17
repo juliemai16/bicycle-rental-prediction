@@ -15,31 +15,32 @@ In this project, we develop and evaluate multiple machine-learning models to acc
 
 ## Project Structure
 ```
-predict_bicycle_project/
+bicycle-rental-prediction/
 │
 ├── data/
-│   ├── trainDataset.csv
-│   ├── submissionDataset.csv
-│   └── submissionDataset_with_predictions.csv
+│   ├── trainDataset.csv                                  # Training dataset
+│   ├── submissionDataset.csv                             # Testing dataset
+│   └── submissionDataset_with_predictions.csv            # New dataset for making predictions
 │
 ├── plots/
-│   ├── eda/
-│   ├── visualization/
-│   └── statistical_analysis/
+│   ├── eda/                                              # Directory to save EDA plots
+│   ├── visualization/                                    # Directory to save data visualization plots
+│   └── statistical_analysis/                             # Directory to save statistical analysis plots
 │
 ├── src/
-│   ├── __init__.py
-│   ├── data_preprocessing.py
-│   ├── eda.py
-│   ├── models.py
-│   ├── train_and_evaluate.py
-│   ├── predict.py
-│   └── visualization.py
-│   └── statistical_analysis.py
+│   ├── __init__.py                                       # Init file to treat the directory as a package
+│   ├── data_preprocessing.py                             # Script for data preprocessing
+│   ├── eda.py                                            # Script for exploratory data analysis
+│   ├── modeling.py                                       # Script for model definitions and hyperparameter tuning
+│   ├── train_and_evaluate.py                             # Script to train and evaluate models, selecting the best one
+│   ├── predict.py                                        # Script to make predictions using the best model
+│   ├── visualization.py                                  # Script for data visualization
+│   └── statistical_analysis.py                           # Script for statistical analysis
 │
-├── requirements.txt
-├── README.md
-└── .gitignore
+├── requirements.txt                                      # File listing the required Python packages
+├── README.md                                             # Project documentation
+└── .gitignore                                            # File specifying which files to ignore in version control
+
 ```
 
 ## Motivation
