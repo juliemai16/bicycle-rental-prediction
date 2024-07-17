@@ -18,28 +18,28 @@ In this project, we develop and evaluate multiple machine-learning models to acc
 bicycle-rental-prediction/
 │
 ├── data/
-│   ├── trainDataset.csv                                  # Training dataset
-│   ├── submissionDataset.csv                             # Testing dataset
-│   └── submissionDataset_with_predictions.csv            # New dataset for making predictions
+│   ├── trainDataset.csv                              # Training dataset
+│   ├── submissionDataset.csv                         # Testing dataset
+│   └── submissionDataset_with_predictions.csv        # New dataset for making predictions
 │
 ├── plots/
-│   ├── eda/                                              # Directory to save EDA plots
-│   ├── visualization/                                    # Directory to save data visualization plots
-│   └── statistical_analysis/                             # Directory to save statistical analysis plots
+│   ├── eda/                                          # Directory to save EDA plots
+│   ├── visualization/                                # Directory to save data visualization plots
+│   └── statistical_analysis/                         # Directory to save statistical analysis plots
 │
 ├── src/
-│   ├── __init__.py                                       # Init file to treat the directory as a package
-│   ├── data_preprocessing.py                             # Script for data preprocessing
-│   ├── eda.py                                            # Script for exploratory data analysis
-│   ├── modeling.py                                       # Script for model definitions and hyperparameter tuning
-│   ├── train_and_evaluate.py                             # Script to train and evaluate models, selecting the best one
-│   ├── predict.py                                        # Script to make predictions using the best model
-│   ├── visualization.py                                  # Script for data visualization
-│   └── statistical_analysis.py                           # Script for statistical analysis
+│   ├── __init__.py                                   # Init file to treat the directory as a package
+│   ├── data_preprocessing.py                         # Script for data preprocessing
+│   ├── eda.py                                        # Script for exploratory data analysis
+│   ├── modeling.py                                   # Script for model definitions and hyperparameter tuning
+│   ├── train_and_evaluate.py                         # Script to train and evaluate models, selecting the best one
+│   ├── predict.py                                    # Script to make predictions using the best model
+│   ├── visualization.py                              # Script for data visualization
+│   └── statistical_analysis.py                       # Script for statistical analysis
 │
-├── requirements.txt                                      # File listing the required Python packages
-├── README.md                                             # Project documentation
-└── .gitignore                                            # File specifying which files to ignore in version control
+├── requirements.txt                                  # File listing the required Python packages
+├── README.md                                         # Project documentation
+└── .gitignore                                        # File specifying which files to ignore in version control
 
 ```
 
